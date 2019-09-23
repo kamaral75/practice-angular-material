@@ -1,0 +1,14 @@
+version: '3.5'
+
+services:
+
+  practice-angular-material:
+    container_name: practice-angular-material
+    build:
+      context: ./client
+      dockerfile: DockerfileClientLocal
+    volumes:
+      - './client/:/home/node/app'
+      - '/home/node/app/node_modules'
+    ports:
+      - '4201:4200'
